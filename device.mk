@@ -11,6 +11,9 @@ PRODUCT_SHIPPING_API_LEVEL := 29
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
+# Google Basic apps
+$(call inherit-product-if-exists, vendor/gapps/basic/config.mk)
+
 # Include GSI keys
 $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 
