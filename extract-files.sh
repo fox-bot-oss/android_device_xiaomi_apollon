@@ -63,6 +63,15 @@ fi
 
 function blob_fixup() {
     case "${1}" in
+        vendor/etc/libnfc-nci.conf)
+            cat << EOF >> "${2}"
+###############################################################################
+# Mifare Tag implementation
+# 0: General implementation
+# 1: Legacy implementation
+LEGACY_MIFARE_READER=1
+EOF
+            ;;
         vendor/lib/hw/audio.primary.kona.so)
             # Before
             # 07 ad 01 eb  # bl         __android_log_print
