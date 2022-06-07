@@ -378,8 +378,7 @@ PRODUCT_PACKAGES += \
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(DEVICE_PATH) \
-    hardware/xiaomi
+    $(DEVICE_PATH)
 
 # Telephony
 PRODUCT_PACKAGES += \
